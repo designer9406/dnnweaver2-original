@@ -18,7 +18,7 @@ module ram
   input  wire [ DATA_WIDTH  -1 : 0 ]  s_write_data
 );
 
-  reg  [ DATA_WIDTH -1 : 0 ] mem [ 0 : 1<<ADDR_WIDTH ];
+  reg  [ DATA_WIDTH -1 : 0 ] mem [ 0 : (1<<ADDR_WIDTH)-1 ];
 
   always @(posedge clk)
   begin: RAM_WRITE
